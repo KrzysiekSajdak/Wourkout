@@ -10,8 +10,10 @@ $(document).ready(function() {
 });
 
 function playSoundHandler(file) {
-    var sound = new Audio("sounds/" + file + ".m4a");
+    var sound = new Audio("sounds/" + file + ".mp3");
+
     sound.play();
+    sound.autoplay = true;
 }
 
 function addTimerComponentsHandler(deviceHeight) {
