@@ -98,10 +98,11 @@ body {
 }
 
 #workout-task {
+    text-align: center;
     max-width: fit-content;
     max-height: fit-content;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 130px;
+    font-size: 110px;
     color: #e0e0e0;
     height: 33%;
     display: flex;
@@ -110,6 +111,7 @@ body {
 }
 
 #workout-task-again {
+    text-align: center;
     max-width: fit-content;
     max-height: fit-content;
     font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +123,63 @@ body {
     justify-content: center;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 440px) {
+    #timer {
+        margin-left: auto;
+        margin-right: auto;
+        font-family: "DigitalDismay", serif;
+        font-size: 50px;
+        color: #e0e0e0;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #workout-task {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        color: #e0e0e0;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #workout-task-again {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 40px;
+        color: #e0e0e0;
+        height: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #add-timer-cnt {
+        font-family: "DigitalDismay", serif;
+        font-size: 90px;
+        color: #e0e0e0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #add-timer-cnt input {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    #start-btn {
+        margin-top: 30px;
+        padding: 10px;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+  }
+  @media screen and (max-height: 440px) {
     #timer {
         margin-left: auto;
         margin-right: auto;
