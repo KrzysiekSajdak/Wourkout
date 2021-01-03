@@ -8,6 +8,7 @@ body {
     margin: auto 0;
     width: 100%;
     height: 800px;
+    color: #e0e0e0;
 }
 
 #setup-time-cnt {
@@ -20,7 +21,6 @@ body {
 #add-timer-cnt {
     font-family: "DigitalDismay", serif;
     font-size: 180px;
-    color: #e0e0e0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,7 +66,6 @@ body {
 #get-ready-time-cnt {
     font-family: "DigitalDismay", serif;
     font-size: 180px;
-    color: #e0e0e0;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -84,141 +83,56 @@ body {
     margin-right: auto;
     font-family: "DigitalDismay", serif;
     font-size: 100px;
-    color: #e0e0e0;
-    height: 33%;
     display: flex;
-    align-items: center;
+    align-items:flex-end;
     justify-content: center;
+    padding: 20px;
+    height: 30%;
 }
 
 #workout-task {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 110px;
-    color: #e0e0e0;
-    height: 33%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    height: 40%;
 }
 
 #workout-task-again {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 80px;
-    color: #e0e0e0;
-    height: 33%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+    padding: 20px;
+    height: 30%;
 }
 
-@media screen and (max-width: 440px) {
+  @media screen and (max-height: 850px) {
+    body {
+        height: 100%;
+    }
     #timer {
-        margin-left: auto;
-        margin-right: auto;
-        font-family: "DigitalDismay", serif;
-        font-size: 50px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 40px;
     }
     
     #workout-task {
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 60px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
     
     #workout-task-again {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        font-size: 25px;
     }
     #add-timer-cnt {
-        font-family: "DigitalDismay", serif;
         font-size: 90px;
-        color: #e0e0e0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    #add-timer-cnt input {
-        width: 30px;
-        height: 30px;
-        font-size: 16px;
-        border-radius: 10px;
-        text-align: center;
-    }
-    #start-btn {
-        margin-top: 30px;
-        padding: 10px;
-        font-size: 22px;
-        border-radius: 10px;
-    }
-  }
-  @media screen and (max-height: 800px) {
-    #timer {
-        margin-left: auto;
-        margin-right: auto;
-        font-family: "DigitalDismay", serif;
-        font-size: 50px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #workout-task {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 60px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    #workout-task-again {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 40px;
-        color: #e0e0e0;
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #add-timer-cnt {
-        font-family: "DigitalDismay", serif;
-        font-size: 90px;
-        color: #e0e0e0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
     }
     
     #get-ready-time-cnt {
-        font-family: "DigitalDismay", serif;
         font-size: 90px;
-        color: #e0e0e0;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
     }
 
     #add-timer-cnt input {
