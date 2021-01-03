@@ -1,7 +1,7 @@
 //WIP
 function getReadyComponentsHandler() {
     console.log(deviceScreenHeight);
-    $("body").append('<div id="get-ready-time-cnt"></div>');
+    $("#main-container").append('<div id="get-ready-time-cnt"></div>');
     $("#get-ready-time-cnt").css("height", deviceScreenHeight);
     $("#get-ready-time-cnt").append('<div id="minutes-cnt">');
     $("#minutes-cnt").append('<div id="training-time-minutes">00</div>');

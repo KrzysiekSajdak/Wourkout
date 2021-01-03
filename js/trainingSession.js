@@ -3,28 +3,28 @@ function trainingSessionHandler(exercise, sec, min) {
     var exerciseIndex = 0;
     var singleExerciseCounter = 5;
 
-    var training; 
-        switch (exercise) {
-            case "punches":
-                training = punches;
-                break;
-            case "kicks":
-                training = kicks;
-                break;
-            case "combinations":
-                training = combinations;
-                break;
-            default:
-                break;
-        }
+    var training;
+    switch (exercise) {
+        case "punches":
+            training = punches;
+            break;
+        case "kicks":
+            training = kicks;
+            break;
+        case "combinations":
+            training = combinations;
+            break;
+        default:
+            break;
+    }
 
     var timer = setInterval(function() {
         document.getElementById('timer').innerHTML = makeMeTwoDigits(Math.floor(sec / 60)) + ":" + makeMeTwoDigits(sec % 60);
         sec--;
         if (exercise === "punches") {
-            if(training.length > exerciseIndex) {
-                if(singleExerciseCounter > 0) {  
-                    if (singleExerciseCounter === 5) playSoundHandler(training[exerciseIndex]);                
+            if (training.length > exerciseIndex) {
+                if (singleExerciseCounter > 0) {
+                    if (singleExerciseCounter === 5) playSoundHandler(training[exerciseIndex]);
                     $("#workout-task").text(training[exerciseIndex]);
                     $("#workout-task-again").text(singleExerciseCounter + " repetitions left");
                     singleExerciseCounter--;
@@ -36,7 +36,7 @@ function trainingSessionHandler(exercise, sec, min) {
             } else {
                 shuffle(training);
                 exerciseIndex = 0
-            }           
+            }
         }
         // randomSelect = Math.floor(Math.random() * 6);
         // var currentPunch = $("#workout-task").html();;
@@ -61,6 +61,6 @@ function trainingSessionHandler(exercise, sec, min) {
         if (sec < 0) {
             clearInterval(timer);
             removeActiveTrainingComponentsHandler();
-    }
+        }
     }, 1000);
 }

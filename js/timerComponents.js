@@ -1,5 +1,6 @@
 function addTimerComponentsHandler(deviceHeight) {
-    $("body").append('<div id="setup-time-cnt"></div>');
+    $("header").remove();
+    $("#main-container").append('<div id="setup-time-cnt"></div>');
     $("#setup-time-cnt").append('<div id="add-timer-cnt"></div>');
     $("#setup-time-cnt").css("height", deviceHeight);
     $("#add-timer-cnt").append('<div id="minutes-cnt">');
@@ -11,7 +12,7 @@ function addTimerComponentsHandler(deviceHeight) {
     $("#seconds-cnt").append('<input id="plus-seconds" type="button" value="+" onclick="" />');
     $("#seconds-cnt").append('<div id="training-time-seconds">00</div>');
     $("#seconds-cnt").append('<input id="minus-seconds" type="button" value="-" />');
-    $("#setup-time-cnt").append('<input id="start-btn" type="button" value="START" />');
+    $("#setup-time-cnt").append('<input id="start-btn" class="button" type="button" value="START" />');
 }
 
 function removeTimerComponentsHandler() {
