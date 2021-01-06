@@ -5,7 +5,7 @@ var leftUppercut = "Left Uppercut";
 var rightHook = "Right Hook";
 var rightUppercut = "Right Uppercut";
 
-var combinations = [
+var punchesCombinations = [
     [jab, jab],
     [jab, cross],
     [jab, cross, leftHook]

@@ -12,7 +12,7 @@ function trainingSessionHandler(exercise, sec, min) {
             training = kicks;
             break;
         case "combinations":
-            training = combinations;
+            training = punchesCombinations;
             break;
         default:
             break;
@@ -21,6 +21,7 @@ function trainingSessionHandler(exercise, sec, min) {
     var timer = setInterval(function() {
         document.getElementById('timer').innerHTML = makeMeTwoDigits(Math.floor(sec / 60)) + ":" + makeMeTwoDigits(sec % 60);
         sec--;
+
         if (exercise === "punches") {
             if (training.length > exerciseIndex) {
                 if (singleExerciseCounter > 0) {
@@ -37,6 +38,9 @@ function trainingSessionHandler(exercise, sec, min) {
                 shuffle(training);
                 exerciseIndex = 0
             }
+        } else if (exercise === "combinations") {
+            console.log("selected: " + exercise);
+            $("#workout-task").text(training[0]);
         }
         // randomSelect = Math.floor(Math.random() * 6);
         // var currentPunch = $("#workout-task").html();;

@@ -13,20 +13,6 @@ $(document).ready(function() {
     $(".button").click(function () { 
         chosenTraining = $(this).attr("id");
         $("#training-menu").remove();
-        // var training; 
-        // switch (chosenTraining) {
-        //     case "punches":
-        //         training = punches;
-        //         break;
-        //     case "kicks":
-        //         training = kicks;
-        //         break;
-        //     case "combinations":
-        //         training = combinations;
-        //         break;
-        //     default:
-        //         break;
-        // }
         timeSelectorHandler(chosenTraining, sec, min);
     });
 
