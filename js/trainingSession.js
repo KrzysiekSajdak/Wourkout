@@ -2,6 +2,8 @@ function trainingSessionHandler(exercise, sec, min) {
     sec = sec + (min * 60);
     var exerciseIndex = 0;
     var singleExerciseCounter = 5;
+    var combinationsMovementsCounter = 0;
+    var combinationsExercisesCounter = 0;
 
     var training;
     switch (exercise) {
@@ -39,8 +41,26 @@ function trainingSessionHandler(exercise, sec, min) {
                 exerciseIndex = 0
             }
         } else if (exercise === "combinations") {
-            console.log("selected: " + exercise);
-            $("#workout-task").text(training[0]);
+            combinationsExercisesCounter = training[exerciseIndex].length;
+            while(combinationsExercisesCounter > 0) {
+                console.log(training[exerciseIndex][combinationsMovementsCounter]);
+                
+                combinationsMovementsCounter++;
+                combinationsExercisesCounter--;
+            }
+            
+            $("#workout-task").text();
+            exerciseIndex++;
+            combinationsExercisesCounter = 0;
+            
+        } else if (exercise === "kicks") {
+            console.log(training.length);
+            for(x=0; x < training.length; x++) {
+                for(y=0; y<training[x].length;y++) {
+                    console.log(training[x][y]);
+                    console.log(x + "------------");
+                }
+            }
         }
         // randomSelect = Math.floor(Math.random() * 6);
         // var currentPunch = $("#workout-task").html();;

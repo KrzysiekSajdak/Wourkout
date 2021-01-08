@@ -20,4 +20,8 @@ var punches = [
     rightUppercut
 ];
 
-var kicks = [];
+var kicks = [
+    [jab, jab],
+    [jab, cross],
+    [jab, cross, leftHook]
+];
