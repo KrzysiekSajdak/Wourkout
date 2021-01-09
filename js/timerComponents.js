@@ -12,6 +12,7 @@ function addTimerComponentsHandler(deviceHeight) {
     $("#seconds-cnt").append('<input id="plus-seconds" type="button" value="+" onclick="" />');
     $("#seconds-cnt").append('<div id="training-time-seconds">00</div>');
     $("#seconds-cnt").append('<input id="minus-seconds" type="button" value="-" />');
+    $("#setup-time-cnt").append('<input id="random-btn" class="button" type="button" value="SHUFFLE ALL COMBINATIONS" />');
     $("#setup-time-cnt").append('<input id="start-btn" class="button" type="button" value="START" />');
 }
 

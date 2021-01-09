@@ -13,6 +13,7 @@ $(document).ready(function() {
     $(".button").click(function () { 
         chosenTraining = $(this).attr("id");
         $("#training-menu").remove();
+        console.log(chosenTraining);
         timeSelectorHandler(chosenTraining, sec, min);
     });
 

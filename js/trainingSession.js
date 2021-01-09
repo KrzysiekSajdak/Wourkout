@@ -1,26 +1,32 @@
-function trainingSessionHandler(exercise, sec, min) {
+function trainingSessionHandler(exercise, sec, min, shuffledTraining) {
     sec = sec + (min * 60);
-    var exerciseIndex = 0;
-    var singleExerciseCounter = 5;
-    var combinationsMovementsCounter = 0;
-    var combinationsExercisesCounter;
-    var combosIndex = 0;
+
+    globalThis.exerciseIndex = 0;
+    globalThis.singleExerciseCounter = 5;
+    globalThis.combinationsMovementsCounter = 0;
+    globalThis.combosIndex = 0;
 
     var training;
     switch (exercise) {
         case "punches":
             training = punches;
             break;
+        case "punches-combinations":
+            training = punchesCombinations;
+            break;
         case "kicks":
             training = kicks;
             break;
-        case "combinations":
-            training = punchesCombinations;
+        case "mma-combinations":
+            training = mmaCombinations;
             break;
         default:
             break;
     }
 
+    if (shuffledTraining) shuffle(training);
+
+    console.log(training);
     var timer = setInterval(function() {
         document.getElementById('timer').innerHTML = makeMeTwoDigits(Math.floor(sec / 60)) + ":" + makeMeTwoDigits(sec % 60);
         sec--;
@@ -42,27 +48,29 @@ function trainingSessionHandler(exercise, sec, min) {
                 exerciseIndex = 0
             }
         } 
-        else if (exercise === "combinations") {
-                if (training.length > exerciseIndex) {
-                    if (training[exerciseIndex].length > combosIndex) {
-                        $("#workout-task").animate({
-                            opacity: 1,
-                        }, 500);
-                        playSoundHandler(training[exerciseIndex][combinationsMovementsCounter]);
-                        $("#workout-task").text(training[exerciseIndex][combinationsMovementsCounter]);
-                        $("#workout-task").animate({
-                            opacity: 0,
-                        }, 500);
-                        combosIndex++;
-                        combinationsMovementsCounter++;
-                    } else {
-                        exerciseIndex++;
-                        combosIndex = 0;
-                        combinationsMovementsCounter = 0;
-                    } 
-                } else {
-                    exerciseIndex = 0;
-                }            
+        else if (exercise === "punches-combinations") {
+            
+            combinationsTrainingHandler(training);
+            //     if (training.length > exerciseIndex) {
+            //         if (training[exerciseIndex].length > combosIndex) {
+            //             $("#workout-task").animate({
+            //                 opacity: 1,
+            //             }, 500);
+            //             playSoundHandler(training[exerciseIndex][combinationsMovementsCounter]);
+            //             $("#workout-task").text(training[exerciseIndex][combinationsMovementsCounter]);
+            //             $("#workout-task").animate({
+            //                 opacity: 0,
+            //             }, 500);
+            //             combosIndex++;
+            //             combinationsMovementsCounter++;
+            //         } else {
+            //             exerciseIndex++;
+            //             combosIndex = 0;
+            //             combinationsMovementsCounter = 0;
+            //         } 
+            //     } else {
+            //         exerciseIndex = 0;
+            //     }            
             } 
         // randomSelect = Math.floor(Math.random() * 6);
         // var currentPunch = $("#workout-task").html();;
@@ -89,4 +97,29 @@ function trainingSessionHandler(exercise, sec, min) {
             removeActiveTrainingComponentsHandler();
         }
     }, 1000);
+}
+
+function combinationsTrainingHandler(training) {
+    
+    if (training.length > exerciseIndex) {
+        if (training[exerciseIndex].length > combosIndex) {
+            console.log(training[exerciseIndex][combinationsMovementsCounter]);
+            $("#workout-task").animate({
+                opacity: 1,
+            }, 500);
+            playSoundHandler(training[exerciseIndex][combinationsMovementsCounter]);
+            $("#workout-task").text(training[exerciseIndex][combinationsMovementsCounter]);
+            $("#workout-task").animate({
+                opacity: 0,
+            }, 500);
+            combosIndex++;
+            combinationsMovementsCounter++;
+        } else {
+            exerciseIndex++;
+            combosIndex = 0;
+            combinationsMovementsCounter = 0;
+        } 
+    } else {
+        exerciseIndex = 0;
+    }            
 }

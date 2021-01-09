@@ -159,6 +159,6 @@ header {
         height: 50px;
         font-size: 24px;
         margin: 5px;
-        border-radius: 5px;
+        /* border-radius: 5px; */
     }
 }
