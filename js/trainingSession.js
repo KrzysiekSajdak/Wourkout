@@ -3,7 +3,8 @@ function trainingSessionHandler(exercise, sec, min) {
     var exerciseIndex = 0;
     var singleExerciseCounter = 5;
     var combinationsMovementsCounter = 0;
-    var combinationsExercisesCounter = 0;
+    var combinationsExercisesCounter;
+    var combosIndex = 0;
 
     var training;
     switch (exercise) {
@@ -40,28 +41,29 @@ function trainingSessionHandler(exercise, sec, min) {
                 shuffle(training);
                 exerciseIndex = 0
             }
-        } else if (exercise === "combinations") {
-            combinationsExercisesCounter = training[exerciseIndex].length;
-            while(combinationsExercisesCounter > 0) {
-                console.log(training[exerciseIndex][combinationsMovementsCounter]);
-                
-                combinationsMovementsCounter++;
-                combinationsExercisesCounter--;
-            }
-            
-            $("#workout-task").text();
-            exerciseIndex++;
-            combinationsExercisesCounter = 0;
-            
-        } else if (exercise === "kicks") {
-            console.log(training.length);
-            for(x=0; x < training.length; x++) {
-                for(y=0; y<training[x].length;y++) {
-                    console.log(training[x][y]);
-                    console.log(x + "------------");
-                }
-            }
-        }
+        } 
+        else if (exercise === "combinations") {
+                if (training.length > exerciseIndex) {
+                    if (training[exerciseIndex].length > combosIndex) {
+                        $("#workout-task").animate({
+                            opacity: 1,
+                        }, 500);
+                        playSoundHandler(training[exerciseIndex][combinationsMovementsCounter]);
+                        $("#workout-task").text(training[exerciseIndex][combinationsMovementsCounter]);
+                        $("#workout-task").animate({
+                            opacity: 0,
+                        }, 500);
+                        combosIndex++;
+                        combinationsMovementsCounter++;
+                    } else {
+                        exerciseIndex++;
+                        combosIndex = 0;
+                        combinationsMovementsCounter = 0;
+                    } 
+                } else {
+                    exerciseIndex = 0;
+                }            
+            } 
         // randomSelect = Math.floor(Math.random() * 6);
         // var currentPunch = $("#workout-task").html();;
         // if (exercise[randomSelect] == currentPunch) {
