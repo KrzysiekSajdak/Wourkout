@@ -25,11 +25,11 @@ function timeSelectorHandler(training, sec, min) {
 
     $("#random-btn").click(function() { 
         if (!shuffledTraining) {
-            $("#random-btn").css("background-color", "#ff7043");
+            $("#random-btn").css("color", "#ff7043").css("font-weight", "700");
             shuffledTraining = true;
         } 
         else {
-            $("#random-btn").css("background-color", "white");
+            $("#random-btn").css("color", "black").css("font-weight", "400");;
             shuffledTraining = false;
         } 
     });
