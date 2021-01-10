@@ -1,5 +1,4 @@
 function addTimerComponentsHandler(deviceHeight) {
-    $("h1").text("Choose training duration");
     $("#main-container").append('<div id="setup-time-cnt"></div>');
     $("#setup-time-cnt").append('<div id="add-timer-cnt"></div>');
     $("#setup-time-cnt").css("height", deviceHeight);
@@ -27,4 +26,5 @@ function returnToMenuHandler() {
         opacity: 1,
     }, 1000);
     addMenuHandler();
+    selectTrainingHandler();
 }

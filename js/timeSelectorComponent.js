@@ -39,7 +39,6 @@ function timeSelectorHandler(training, sec, min) {
 
 
     $("#start-btn").click(function() {
-        console.log(training);
         removeTimerComponentsHandler();
         addActiveTrainingComponentsHandler(deviceScreenHeight);
         trainingSessionHandler(training, sec, min, shuffledTraining);

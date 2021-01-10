@@ -1,0 +1,32 @@
+header {
+    display: flex;
+    background-color: #102027;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #cfd8dc;
+    justify-content: space-between;
+}
+h1 {
+    /* padding: 20px 0 0 0; */
+    margin: 0;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#radio-btn {
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #102027;
+    border: 0;
+    height: 24px;
+    color: #cfd8dc;
+}
+#radio-btn i {
+    padding-left: 10px;
+}
