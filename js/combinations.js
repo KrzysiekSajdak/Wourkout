@@ -16,6 +16,10 @@ var frontKick = "Front Kick";
 var roundhouseKick = "Roundhouse Kick";
 var pushKick = "Push Kick";
 
+//STANCE 
+var leftLegForward = "Left Leg Forward";
+var rightLegForward = "Right Leg Forward";
+
 var punchesCombinations = [
     [jab, jab],
     [jab, cross],
@@ -61,9 +65,5 @@ var kicks = [
 ];
 
 var mmaCombinations = [
-
-];
-
-var karateCombinations = [
 
 ];

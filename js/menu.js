@@ -11,7 +11,3 @@ function addMenuHandler() {
     $("#training-menu").append('<input id="mma-combinations" class="button" type="button" value="MMA Combinations" onclick="start()"/>');
     $("#training-menu").append('<input id="karate-combinations" class="button" type="button" value="Karate Combinations" onclick="start()"/>');
 }
-
-function start() {
-    //sounds.play();   
-}

@@ -25,8 +25,7 @@ function trainingSessionHandler(exercise, sec, min, shuffledTraining) {
     }
 
     if (shuffledTraining) shuffle(training);
-
-    console.log(training);
+    
     var timer = setInterval(function() {
         document.getElementById('timer').innerHTML = makeMeTwoDigits(Math.floor(sec / 60)) + ":" + makeMeTwoDigits(sec % 60);
         sec--;
@@ -103,7 +102,6 @@ function combinationsTrainingHandler(training) {
     
     if (training.length > exerciseIndex) {
         if (training[exerciseIndex].length > combosIndex) {
-            console.log(training[exerciseIndex][combinationsMovementsCounter]);
             $("#workout-task").animate({
                 opacity: 1,
             }, 500);
